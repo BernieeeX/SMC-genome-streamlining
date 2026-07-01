@@ -2,7 +2,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-# shellcheck disable=SC1091
+# shellcheck disable=SC1091;Reads were assembled de novo with MEGAHIT via the MetaWRAP assembly module.
 source "$SCRIPT_DIR/../00_setup/common.sh"
 load_config
 
@@ -14,7 +14,8 @@ threads="${4:-$THREADS_DEFAULT}"
 require_file "$read1"
 require_file "$read2"
 ensure_dir "$out_dir"
-
+    --use-megahit
+    
 activate_conda_env "$CONDA_SH" "$METAWRAP_CONDA_ENV"
 
 log "Running metaWRAP assembly"
