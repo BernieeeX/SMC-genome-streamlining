@@ -1,0 +1,12 @@
+site_name: SMC Project Pipeline
+site_description: Clean, reproducible bioinformatics workflow for the SMC manuscript project.
+docs_dir: docs
+site_dir: site
+theme:
+  name: readthedocs
+nav:
+  - Home: index.md
+  - Workflow: workflow.md
+  - Input Requirements: input_requirements.md
+  - Output Files: output_files.md
+  - Methods Mapping: manuscript_methods_mapping.md
